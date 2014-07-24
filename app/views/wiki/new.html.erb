@@ -1,0 +1,16 @@
+<h1>New Wiki</h1>
+
+  <div class="col-md-8">
+    <%= form_for @wiki do |f| %>
+      <div class="form-group">
+        <%= f.label :name %>
+        <%= f.text_field :name, class: 'form-control', placeholer: "Enter wiki name" %>
+      </div>
+      <div class="form-group">
+        <%= f.label :description %>
+        <%= f.text_area :description, rows: 10, class: 'form-control', placeholder: "Enter Wiki description" %>
+      </div>
+        <%= f.submit "Save", class: 'btn btn-success' %>
+      <% end %>
+  </div>
+
