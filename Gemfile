@@ -4,9 +4,22 @@ source 'https://rubygems.org'
 gem 'rails', '4.0.5'
 
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+group :production do
+  gem 'pg'
+  gem 'rails_12factor'
+end
+
+group :development do
+  gem 'sqlite3'
+end
 
 gem 'devise'
+
+gem 'pundit'
+
+gem 'faker'
+
+gem 'will_paginate'
 
 gem 'bootstrap-sass'
 
@@ -23,6 +36,8 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.0.0'
 
 gem 'friendly_id'
+
+gem 'figaro'
 
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby

@@ -1,0 +1,25 @@
+<h2>Edit Wiki</h2>
+
+<div class="row">
+  <div class="col-md-4">
+    <p>Wiki editing rules:</p>
+      <ol>
+        <li>Don't be an idiot.</li>
+        <li>Only edit if you have at least partial intelligence.</li>
+        <li>Remember little children may be reading this for their projects!</li>
+      </ol>
+  </div>
+  <div class="col-md-8">
+    <%= form_for @wiki do |f| %>
+      <div class="form-group">
+        <%=f.label :title %>
+        <%=f.text_field :title, class: 'form-control', placeholder: "Junk goes here." %>
+      </div>
+      <div class="form-group>">
+          <%= f.label :description %>
+          <%=f.text_area :description, rows: 10, class: 'form-control', placeholder: "More junk here please. " %>
+      </div>
+        <%= f.submit "Save", class: 'btn btn-success' %>
+      <% end %>
+  </div>
+</div>
