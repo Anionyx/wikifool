@@ -45,7 +45,8 @@ class WikisController < ApplicationController
     params.require(:wiki).permit(
       :title,
       :description,
-      :public
+      :public,
+      :image
       )
   end
 end
